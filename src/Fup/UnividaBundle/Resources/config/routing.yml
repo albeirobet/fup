@@ -1,0 +1,7 @@
+fup_univida_homepage:
+    pattern:  /hola
+    defaults: { _controller: FupUnividaBundle:Default:index }
+
+fup_univida_actas_reunion:
+    pattern:  /actas/reunion
+    defaults: { _controller: FupUnividaBundle:ActasReunion:cargarActasReunion }

@@ -1,0 +1,4 @@
+fup_univida:
+    resource: "@FupUnividaBundle/Resources/config/routing.yml"
+    prefix:   /
+

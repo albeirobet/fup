@@ -1,0 +1,7 @@
+parameters:
+#    fup_univida.example.class: Fup\UnividaBundle\Example
+
+services:
+#    fup_univida.example:
+#        class: %fup_univida.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
