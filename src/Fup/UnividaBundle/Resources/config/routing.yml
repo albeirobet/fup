@@ -5,3 +5,7 @@ fup_univida_homepage:
 fup_univida_actas_reunion:
     pattern:  /actas/reunion
     defaults: { _controller: FupUnividaBundle:ActasReunion:cargarActasReunion }
+
+fup_univida_nuevo_tipo_acta:
+    pattern:  /actas/nuevotipo
+    defaults: { _controller: FupUnividaBundle:Actas:nuevoTipoActa }

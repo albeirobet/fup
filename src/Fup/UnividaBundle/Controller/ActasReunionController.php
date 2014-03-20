@@ -13,7 +13,6 @@ use Fup\UnividaBundle\Entity\TipoActa;
 class ActasReunionController extends Controller {
 
     public function cargarActasReunionAction() {
-        $this->insertarTipoActaReunionAction();
         $em = $this->getDoctrine()->getManager();
         $actas = $em->getRepository('FupUnividaBundle:TipoActa')->findAll();
         return $this->render('FupUnividaBundle:ActasReunion:actasReunion.html.twig', array('actas' => $actas));
