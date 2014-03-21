@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: fupunividadb
+    database_user: root
+    database_password: hds2013
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: es
+    secret: 332865a21f3a8d1338b481494338aab3bfc84bdd
+    database_path: null
