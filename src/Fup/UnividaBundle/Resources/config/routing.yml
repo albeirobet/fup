@@ -9,3 +9,17 @@ fup_univida_actas_reunion:
 fup_univida_nuevo_tipo_acta:
     pattern:  /actas/nuevotipo
     defaults: { _controller: FupUnividaBundle:Actas:nuevoTipoActa }
+    
+fup_univida_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva
+    defaults: { _controller: FupUnividaBundle:ActasReunion:nuevaActaReunion }
+
+fup_univida_datos_basicos_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/datosbasicos
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarDatosBasicosActaReunion }
+    
+fup_univida_asistentes_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/datosbasicos
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarDatosBasicosActaReunion }
+
+

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+{{ parent() }}
+{% endblock %}
+{% block menu_principal %}
+<li class="active"><a href="#">Inicio</a></li>
+{% endblock menu_principal%}
+{% block contenedor_principal %}
+<form action="{{ path('fup_univida_nueva_acta_reunion') }}" method="post">
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+
+
+
+{% endblock contenedor_principal %}
