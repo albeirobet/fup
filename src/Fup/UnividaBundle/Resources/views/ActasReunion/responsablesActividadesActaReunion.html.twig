@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block menu_principal %}
+    <li class="active"><a href="#">Inicio</a></li>
+    {% endblock menu_principal%}
+    {% block contenedor_principal %}
+    <form action="{{ path('fup_univida_responsables_actividades_nueva_acta_reunion') }}" method="post">
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+    <br><br>
+    <div>
+        <h4><strong>
+                <p class="text-center">Responsables Actividades Reunion</p>
+            </strong>
+        </h4>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Orden</th>
+                    <th>Actividad</th>
+                    <th>Responsable</th>
+                    <th>Fecha de Compromiso</th>
+                    <th>Recursos Asociados</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for responsable in responsables %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{responsable.actividad}}</td>
+                        <td>{{responsable.responsable}}</td>
+                        <td>{{ responsable.fechaEntrega|date('Y-m-d H:i:s') }}</td>
+                        <td>{{responsable.recursosAsignados}}</td>
+                        <td>{{responsable.estado}}</td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-danger"  onclick="window.location = '{{ path('fup_univida_guardar_acta_reunion') }}'">Finalizar</button>        
+
+{% endblock contenedor_principal %}

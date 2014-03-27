@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="tbl_responsables_actividades_reunion")
  * @ORM\Entity(repositoryClass="Fup\UnividaBundle\Entity\ResponsablesActividadesReunionRepository")
  */
-class ResponsablesActividadesReunion
-{
+class ResponsablesActividadesReunion {
+
     /**
      * @var integer
      *
@@ -27,6 +27,13 @@ class ResponsablesActividadesReunion
      * @ORM\Column(name="actividad", type="string", length=500)
      */
     private $actividad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="responsable", type="string", length=255)
+     */
+    private $responsable;
 
     /**
      * @var \DateTime
@@ -49,14 +56,12 @@ class ResponsablesActividadesReunion
      */
     private $estado;
 
-
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -66,8 +71,7 @@ class ResponsablesActividadesReunion
      * @param string $actividad
      * @return ResponsablesActividadesReunion
      */
-    public function setActividad($actividad)
-    {
+    public function setActividad($actividad) {
         $this->actividad = $actividad;
 
         return $this;
@@ -78,9 +82,29 @@ class ResponsablesActividadesReunion
      *
      * @return string 
      */
-    public function getActividad()
-    {
+    public function getActividad() {
         return $this->actividad;
+    }
+
+    /**
+     * Set responsable
+     *
+     * @param string $responsable
+     * @return ResponsablesActividadesReunion
+     */
+    public function setResponsable($responsable) {
+        $this->responsable = $responsable;
+
+        return $this;
+    }
+
+    /**
+     * Get responsable
+     *
+     * @return string 
+     */
+    public function getResponsable() {
+        return $this->responsable;
     }
 
     /**
@@ -89,8 +113,7 @@ class ResponsablesActividadesReunion
      * @param \DateTime $fechaEntrega
      * @return ResponsablesActividadesReunion
      */
-    public function setFechaEntrega($fechaEntrega)
-    {
+    public function setFechaEntrega($fechaEntrega) {
         $this->fechaEntrega = $fechaEntrega;
 
         return $this;
@@ -101,8 +124,7 @@ class ResponsablesActividadesReunion
      *
      * @return \DateTime 
      */
-    public function getFechaEntrega()
-    {
+    public function getFechaEntrega() {
         return $this->fechaEntrega;
     }
 
@@ -112,8 +134,7 @@ class ResponsablesActividadesReunion
      * @param string $recursosAsignados
      * @return ResponsablesActividadesReunion
      */
-    public function setRecursosAsignados($recursosAsignados)
-    {
+    public function setRecursosAsignados($recursosAsignados) {
         $this->recursosAsignados = $recursosAsignados;
 
         return $this;
@@ -124,8 +145,7 @@ class ResponsablesActividadesReunion
      *
      * @return string 
      */
-    public function getRecursosAsignados()
-    {
+    public function getRecursosAsignados() {
         return $this->recursosAsignados;
     }
 
@@ -135,8 +155,7 @@ class ResponsablesActividadesReunion
      * @param string $estado
      * @return ResponsablesActividadesReunion
      */
-    public function setEstado($estado)
-    {
+    public function setEstado($estado) {
         $this->estado = $estado;
 
         return $this;
@@ -147,8 +166,8 @@ class ResponsablesActividadesReunion
      *
      * @return string 
      */
-    public function getEstado()
-    {
+    public function getEstado() {
         return $this->estado;
     }
+
 }

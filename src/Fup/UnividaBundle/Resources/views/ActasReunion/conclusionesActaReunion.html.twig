@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block menu_principal %}
+    <li class="active"><a href="#">Inicio</a></li>
+    {% endblock menu_principal%}
+    {% block contenedor_principal %}
+    <form action="{{ path('fup_univida_conclusiones_nueva_acta_reunion') }}" method="post">
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+    <br><br>
+    <div>
+        <h4><strong>
+                <p class="text-center">Conclusiones Reunion</p>
+            </strong>
+        </h4>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Orden</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conclusion in conclusiones %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{conclusion.conclusion}}</td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary"  onclick="window.location = '{{ path('fup_univida_responsables_actividades_nueva_acta_reunion') }}'">Continuar</button>        
+
+{% endblock contenedor_principal %}

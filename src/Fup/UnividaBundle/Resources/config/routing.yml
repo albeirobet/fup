@@ -19,7 +19,25 @@ fup_univida_datos_basicos_nueva_acta_reunion:
     defaults: { _controller: FupUnividaBundle:ActasReunion:agregarDatosBasicosActaReunion }
     
 fup_univida_asistentes_nueva_acta_reunion:
-    pattern:  /actas/reunion/nueva/datosbasicos
-    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarDatosBasicosActaReunion }
-
-
+    pattern:  /actas/reunion/nueva/asistentes
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarAsistentesActaReunion }
+    
+fup_univida_items_orden_dia_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/ordendia
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarOrdenDiaActaReunion }
+    
+fup_univida_generalidades_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/generalidades
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarGeneralidadActaReunion }
+    
+fup_univida_conclusiones_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/conclusiones
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarConclusionActaReunion }
+    
+fup_univida_responsables_actividades_nueva_acta_reunion:
+    pattern:  /actas/reunion/nueva/responsablesactividades
+    defaults: { _controller: FupUnividaBundle:ActasReunion:agregarResponsableActividadActaReunion }
+    
+fup_univida_guardar_acta_reunion:
+    pattern:  /actas/reunion/nueva/guardaracta
+    defaults: { _controller: FupUnividaBundle:ActasReunion:guardarActaReunion }

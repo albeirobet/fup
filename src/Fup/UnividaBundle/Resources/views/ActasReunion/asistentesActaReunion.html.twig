@@ -1,16 +1,49 @@
 {% extends '::base.html.twig' %}
 {% block title %}
-{{ parent() }}
+    {{ parent() }}
 {% endblock %}
 {% block menu_principal %}
-<li class="active"><a href="#">Inicio</a></li>
-{% endblock menu_principal%}
-{% block contenedor_principal %}
-<form action="{{ path('fup_univida_asistentes_nueva_acta_reunion') }}" method="post">
-    {{ form_widget(form) }}
-    <input type="submit" />
-</form>
+    <li class="active"><a href="#">Inicio</a></li>
+    {% endblock menu_principal%}
+    {% block contenedor_principal %}
+    <form action="{{ path('fup_univida_asistentes_nueva_acta_reunion') }}" method="post">
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+    <br><br>
+    <div>
+        <h4><strong>
+                <p class="text-center">Asistentes a la Reunion</p>
+            </strong>
+        </h4>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                   
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Movil</th>
+                    <th>Firma</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for asistente in asistentes %}
+                    <tr>
+                        
+                        <td>{{asistente.nombre}}</td>
+                        <td>{{asistente.cargo}}</td>
+                        <td>{{asistente.movil}}</td>
+                        <td>{{asistente.movil}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
 
-
+    
+    <button type="button" class="btn btn-primary"  onclick="window.location='{{ path('fup_univida_items_orden_dia_nueva_acta_reunion') }}'">Continuar</button>
 {% endblock contenedor_principal %}
